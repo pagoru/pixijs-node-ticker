@@ -1,0 +1,23 @@
+{
+  "name": "pixi-node-ticker",
+  "version": "7.1.0-alpha-a",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "yarn run build:mjs && yarn run build:js",
+    "build:mjs": "esbuild src/index.ts --bundle --platform=node --out-extension:.js=.mjs --outfile=lib/index.mjs",
+    "build:js": "esbuild src/index.ts --bundle --platform=node --outfile=lib/index.js"
+  },
+  "description": "PIXI Ticker for node",
+  "author": "Pablo G. Rubio",
+  "contributors": [
+    "Matt Karl <matt@mattkarl.com>",
+    "Pablo G. Rubio <pagoru@gmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "esbuild": "0.15.16"
+  }
+}
